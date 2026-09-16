@@ -1,0 +1,640 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #eef1f5;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+}
+
+
+/* ================================
+   FORMULAIRE PRINCIPAL
+================================ */
+
+.formulaire {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #d5dbe3;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   TITRE PRINCIPAL
+================================ */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+}
+
+
+.sous-titre {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #5f6b77;
+    font-size: 15px;
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+section,
+.pieces-justificatives {
+    border: 1px solid #d5dbe3;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #f8f9fa;
+}
+
+
+section h2,
+.pieces-justificatives h2 {
+    margin: -20px -20px 18px -20px;
+    padding: 12px 20px;
+    background-color: #354352;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   NOTE CHAMP OBLIGATOIRE
+================================ */
+
+.note-obligatoire {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+
+.obligatoire {
+    color: #c62828;
+}
+
+
+.note-obligatoire .obligatoire {
+    font-weight: 600;
+}
+
+
+/* ================================
+   IDENTIFICATION
+================================ */
+
+section:first-of-type > div:not(.note-obligatoire) {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px 20px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+section:first-of-type > div:not(.note-obligatoire) label {
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+section:first-of-type > div:not(.note-obligatoire) input,
+section:first-of-type > div:not(.note-obligatoire) textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   CHAMPS
+================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 9px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   ACHATS
+================================ */
+
+.tableau-achats {
+    display: grid;
+    grid-template-columns: 50px 180px 1fr 95px 75px 50px;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-weight: 600;
+    color: #354352;
+}
+
+
+.ligne-achat {
+    display: grid;
+    grid-template-columns: 50px 180px 1fr 95px 75px 50px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
+.ligne-achat > div {
+    margin: 0;
+}
+
+
+.numero-achat {
+    text-align: center;
+    font-weight: 600;
+    color: #354352;
+}
+
+
+.date-achat {
+    width: 100%;
+}
+
+
+.pieces-achat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.nombre-pieces {
+    min-width: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: #c62828;
+}
+
+
+/* ================================
+   BOUTON AJOUTER UNE PIÈCE
+================================ */
+
+.bouton-ajouter-piece {
+    width: 50px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid #c8cfd5;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #354352;
+    font-family: inherit;
+    font-size: 19px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bouton-ajouter-piece:hover {
+    background-color: #e9ecef;
+}
+
+
+/* ================================
+   BOUTONS SUPPRIMER
+================================ */
+
+.bouton-supprimer-achat,
+.bouton-supprimer-piece {
+    width: 50px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid #c8cfd5;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #354352;
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bouton-supprimer-achat:hover,
+.bouton-supprimer-piece:hover {
+    background-color: #e9ecef;
+}
+
+
+/* ================================
+   BOUTON AJOUTER UN ACHAT
+================================ */
+
+.bouton-ajouter {
+    display: block;
+    margin: 20px 0 25px;
+    padding: 10px 18px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #c8d0da;
+    border-radius: 6px;
+    background-color: #eef1f5;
+    color: #354352;
+    cursor: pointer;
+}
+
+
+.bouton-ajouter:hover {
+    background-color: #dfe4e9;
+}
+
+
+/* ================================
+   TOTAL DES ACHATS
+================================ */
+
+.total-achats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #d5dbe0;
+    color: #354352;
+}
+
+
+.total-achats strong,
+.total-achats span {
+    font-weight: 700;
+}
+
+
+/* ================================
+   JUSTIFICATIONS ADDITIONNELLES
+================================ */
+
+.justification-additionnelle textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+ /* ================================
+    PIÈCES JUSTIFICATIVES
+ ================================= */
+
+.pieces-justificatives {
+    margin-top: 0;
+}
+
+
+.pieces-justificatives > label {
+    display: none;
+}
+
+
+#piecesJustificatives {
+    display: none;
+}
+
+
+/* ================================
+   CADRE BLANC
+================================ */
+
+#listePiecesJustificatives {
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #d5dbe3;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+/* ================================
+   EN-TÊTE DES PIÈCES
+================================ */
+
+.entete-pieces-justificatives {
+    display: grid;
+    grid-template-columns: 1fr 200px 50px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 0;
+    border-bottom: 1px solid #d5dbe3;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #354352;
+}
+
+
+/* ================================
+   LIGNES DES PIÈCES
+================================ */
+
+.piece-justificative {
+    display: grid;
+    grid-template-columns: 1fr 200px 50px;
+    gap: 10px;
+    align-items: center;
+    min-height: 42px;
+    padding: 5px 12px;
+    border-bottom: 1px solid #e1e5e9;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+}
+
+
+.piece-justificative:last-child {
+    border-bottom: none;
+}
+
+
+.nom-piece,
+.achat-piece {
+    color: #354352;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.achat-piece {
+    text-align: left;
+}
+
+
+/* ================================
+   BOUTONS D'ACTION
+================================ */
+
+.boutons-actions {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+}
+
+.bouton-action-info,
+.boutons-actions > button {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.boutons-actions button {
+    width: 100%;    
+    height: 100%;
+    padding: 10px 16px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #c8d0da;
+    border-radius: 6px;
+    background-color: #eef1f5;
+    color: #354352;
+    cursor: pointer;
+}
+
+
+.boutons-actions button:hover {
+    background-color: #dfe4e9;
+}
+
+.bouton-pdf {
+    background-color: #eef1f5;
+    color: #354352;
+    border: 1px solid #c8d0da;
+}
+
+.bouton-pdf:hover {
+    background-color: #dfe4e9;
+}
+
+.bouton-courriel {
+    background-color: #eef1f5;
+    color: #354352;
+    border: 1px solid #c8d0da;
+}
+
+.bouton-courriel:hover {
+    background-color: #dfe4e9;
+}
+
+
+.bouton-imprimer {
+    background-color: #eef1f5;
+    color: #354352;
+    border: 1px solid #c8d0da;
+}
+
+.bouton-imprimer:hover {
+    background-color: #dfe4e9;
+}
+
+
+.bouton-reinitialiser {
+    background-color: #eef1f5;
+    color: #354352;
+    border: 1px solid #c8d0da;
+}
+
+.bouton-reinitialiser:hover {
+    background-color: #dfe4e9;
+}
+
+
+/* ================================
+   FENÊTRES DE CONFIRMATION
+================================ */
+
+.fenetre-confirmation {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+.confirmation-contenu {
+    width: 90%;
+    max-width: 420px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.confirmation-contenu h2 {
+    margin-top: 0;
+    color: #354352;
+}
+
+
+.confirmation-contenu p {
+    color: #444;
+    line-height: 1.5;
+}
+
+
+.confirmation-boutons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.confirmation-boutons button {
+    min-width: 90px;
+    padding: 9px 16px;
+    border: 1px solid #c8d0da;
+    border-radius: 6px;
+    background-color: #eef1f5;
+    color: #354352;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.confirmation-boutons button:hover {
+    background-color: #dfe4e9;
+}
+
+
+.confirmation-succes {
+    font-size: 46px;
+    color: #2f8f5b;
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .formulaire {
+        padding: 20px;
+    }
+
+
+    section:first-of-type > div:not(.note-obligatoire) {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+
+    section:first-of-type > div:not(.note-obligatoire) label {
+        margin-bottom: 2px;
+    }
+
+
+    .tableau-achats {
+        display: none;
+    }
+
+
+    .ligne-achat {
+        grid-template-columns: 40px 1fr 1fr;
+        gap: 10px;
+    }
+
+
+    .ligne-achat .pieces-achat {
+        grid-column: 2;
+    }
+
+
+    .ligne-achat .action-achat {
+        grid-column: 3;
+        justify-self: end;
+    }
+
+
+    .entete-pieces-justificatives {
+        grid-template-columns: 1fr 120px 50px;
+    }
+
+
+    .piece-justificative {
+        grid-template-columns: 1fr 120px 50px;
+    }
+
+}
+
+.message-aucune-piece {
+    padding: 18px;
+    text-align: center;
+    color: #6b737c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.entete-formulaire {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.logo-formulaire {
+    width: 120px;
+    max-height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.texte-entete {
+    flex: 1;
+}
+
+.texte-entete h1 {
+    margin: 0 0 6px 0;
+}
+
+.texte-entete .sous-titre {
+    margin: 0;
+}
