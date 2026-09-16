@@ -478,7 +478,7 @@ textarea {
 ========================================= */
 
 .fenetre-confirmation {
-    display: none !important;
+    display: none;
 
     position: fixed;
     z-index: 9999;
